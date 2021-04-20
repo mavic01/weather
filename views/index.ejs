@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+    
+    <form action="/weather" method="POST"> <!--if we wrap all diz in a form, we're gonna be able to make a post request method when the user hits the button-->
+        <label for="cityInput">City Name: </label> <!--label for the the input below. This id=cityInput -->
+        <input id="cityInput" type="text" name="cityName">
+        <button type="submit">Go</button>
+    </form>
+
+<%- include('partials/footer') %>
+
+
+<!--our form is gonna make a post request to the root route on our server and we'll have to catch it 
+using app.post()
+
+Buh in order for us to catch the text that the user types into the input, we have to use body-parser
+
+body-parser is the package that's gonna aloow u look through the body of the post request
+and fetch the data based on the name of our input-->
